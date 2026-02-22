@@ -559,18 +559,20 @@ footer { border-top:1px solid var(--border);padding:32px 0; }
   .container { padding: 0 20px; }
   section { padding: 60px 0; }
 
-  /* About — stack vertically, photo on top */
+  /* About — stack vertically, text first then photo */
   .about-layout {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
     gap: 32px;
   }
 
-  /* Photo — show on mobile, smaller */
+  .about-text { order: 0; }
+
+  /* Photo — show on mobile, after text */
   .avatar-card {
     display: block;
-    order: -1;
-    max-width: 200px;
+    order: 1;
+    max-width: 220px;
     margin: 0 auto;
   }
 
